@@ -1,0 +1,324 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: extrabold;
+  src: url(./assets/fonts/Gilroy-ExtraBold.otf);
+}
+.gilroy_extrabold{
+  font-family: extrabold;
+}
+
+@font-face {
+  font-family: gilroy_light;
+  src: url(./assets/fonts/Gilroy-Light.otf);
+}
+.gilroy_light{
+  font-family: gilroy_light;
+}
+
+
+
+
+
+
+
+
+@keyframes rotate-full {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  & .infinite {
+    animation-iteration-count: infinite;
+  }
+}
+
+.box1 {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  transform: rotate(0deg);
+  img {
+    max-width: 100%;
+    border-radius: 100%;
+  }
+}
+
+.rotate {
+  animation: rotation-full 5s infinite linear;
+}
+
+.rotate-full {
+  animation: infinite-spinning 8s infinite linear;
+}
+
+
+
+
+
+
+
+
+
+/* =========ABOUT US SECTION STYLING START HERE============= */
+.border-gradient {
+  border: 8px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(77 215 223 / 75%), rgba(194 214 215 / 10%)) 1;
+  border-image-slice: 1;
+}
+
+.flip {
+  position: relative;
+}
+.flip > .front,
+.flip > .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+.flip > .front {
+  transform: rotateY(0deg);
+}
+.flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+.flip:hover > .front {
+  transform: rotateY(180deg);
+}
+.flip:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.flip.flip-vertical > .back {
+  transform: rotateX(-180deg);
+}
+.flip.flip-vertical:hover > .front {
+  transform: rotateX(180deg);
+}
+.flip.flip-vertical:hover > .back {
+  transform: rotateX(0deg);
+}
+
+.flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  /* width: 400px; */
+}
+.flip > .front,
+.flip > .back {
+  display: block;
+  background: white;
+}
+
+.swiper-pagination-bullet-active {
+ /* padding-top: 20px; */
+  background: #3DB5BD;
+}
+.swiper-pagination {
+  margin-bottom: -13px !important;
+}
+
+
+/* =========ABOUT US SECTION STYLING END HERE============= */
+
+
+/* ==========COUNTER SECTION STYLING START HERE============= */
+@keyframes rotate-full-2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-2 {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.box2 {
+  /* width: 10rem; */
+  /* height: 10rem; */
+  border-radius: 50%;
+  transform: rotate(0deg);
+  overflow: hidden;
+}
+
+.rotate-full-2 {
+  animation: rotate-full 5s infinite linear;
+}
+
+.infinite-2 {
+  animation-iteration-count: infinite;
+}
+
+
+
+
+
+.centered-slide {
+  transform: scale(1.1);
+  box-sizing: border-box;
+}
+
+.mySwiper2 .swiper-slide {
+  opacity: 0.2;
+  transition: all 0.5s ease-in-out;
+}
+.mySwiper2 .swiper-slide.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.1);
+
+}  
+
+/* ==========COUNTER SECTION STYLING END HERE============= */
+/* ==========cerasoul SECTION STYLING start HERE============= */
+
+/* 
+ @keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+  transform: rotate(5deg);
+}
+
+.marquee-content {
+  display: flex;
+  width: 100%;
+  animation: scroll-left 20s linear infinite;
+  animation-delay: 0s; 
+}
+
+.marquee-wrapper2 {
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+  transform: rotate(-5deg);
+  top: -50px; 
+}
+
+.marquee-content2 {
+  display: flex;
+  width: 100%; 
+  animation: scroll-right 20s linear infinite;
+  animation-delay: 0s; 
+}
+
+.marquee-item,
+.marquee-item2 {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  white-space: nowrap;
+  color: white;
+  text-transform: uppercase;
+}  */
+
+
+
+/* ================CIRCLE ROTATE ANIMATION START HERE========== */
+.circle {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 100vmax;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	background: url("./assets/imgs/arrow_move.png");
+	border-radius: 100vmax;
+	background-position: center;
+}
+
+.text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: #000;
+  font-weight: 600;
+	font-size: 15px;
+	animation: textRotation 8s linear infinite;
+}
+
+@keyframes textRotation {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.text span {
+	position: absolute;
+	left: 50%;
+	font-size: 1.2em;
+	transform-origin: 0 100px;
+}
+/* ==========CIRCLE ROTATION ANIMATION END HERE============ */
